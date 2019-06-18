@@ -40,19 +40,6 @@ export class HomePage {
   constructor(
   ) {}
 
-  imageFilePath_change($event){
-    let filel:any = this.fileLoader.nativeElement
-    console.log("filel")
-    console.log(filel)
-    // var file = filel.files[0];
-    /*
-    console.log($event)
-    let file = $event.target.files[0];
-    // let file = this.imageFilePath.nativeElement.files[0]
-    console.log(file)*/
-  }
-  // imageFilePath = ""
-
   presentActionSheet(fileLoader) {
     fileLoader.click();
     var that = this;
