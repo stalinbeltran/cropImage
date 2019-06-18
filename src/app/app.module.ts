@@ -11,13 +11,17 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AngularCropperjsModule } from 'angular-cropperjs';
 
+// Import angular-cropperjs
+import { NgxCropperjsModule } from 'ngx-cropperjs';
+
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
-    AngularCropperjsModule],
+    AngularCropperjsModule,
+    NgxCropperjsModule],
   providers: [
     StatusBar,
     SplashScreen,

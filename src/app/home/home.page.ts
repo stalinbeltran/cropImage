@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { AngularCropperjsComponent } from 'angular-cropperjs';
 
+// Import angular-cropperjs
+import { NgxCropperjsModule } from 'ngx-cropperjs';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -15,6 +18,11 @@ export class HomePage {
   scaleValX = 1;
   scaleValY = 1;
 
-  constructor() {}
+  constructor(
+  ) {}
 
 }
+
+
+
+
