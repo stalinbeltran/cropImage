@@ -12,6 +12,19 @@ import { NgxCropperjsComponent } from 'ngx-cropperjs';
 })
 export class AppComponent {
   @ViewChild('angularCropper') public angularCropper: NgxCropperjsComponent;
+  imageurl = "https://image.freepik.com/free-vector/abstract-dynamic-pattern-wallpaper-vector_53876-59131.jpg"
+
+  config = {
+    dragMode: 'crop',
+    aspectRatio: 1,
+    autoCrop: true,
+    movable: true,
+    zoomable: true,
+    scalable: true,
+    autoCropArea: 0.8,
+  };
+
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
