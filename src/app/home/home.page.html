@@ -23,13 +23,10 @@
     <button ion-button icon-left (click)="presentActionSheet(fileLoader)">
         <ion-icon name="camera"></ion-icon>Select Image
       </button>
-  	<span *ngIf="uploadImage != null">
-        <img id="checkinImage" [src]="uploadImage" (load)="imageLoaded()" /> 
-      </span>
-    <ngx-cropperjs  #angularCropper [cropperOptions]="config" [imageUrl]="myImage" *ngIf='myImage'></ngx-cropperjs>
+    <ngx-cropperjs  #angularCropper [cropperOptions]="config" [imageUrl]="uploadImage" *ngIf='uploadImage'></ngx-cropperjs>
 
 
-    <ion-row *ngIf="myImage">
+    <ion-row *ngIf="uploadImage">
         <ion-col col-4>
           <button ion-button outline icon-left color="primary" (click)="zoom(true)">
             <ion-icon name="add"></ion-icon> Zoom
