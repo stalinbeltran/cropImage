@@ -1,16 +1,13 @@
-import { Component, ElementRef } from '@angular/core';
-import { ViewChild } from '@angular/core';
-
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxCropperjsComponent } from 'ngx-cropperjs';
-import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page'
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-modal',
+  templateUrl: './modal.page.html',
+  styleUrls: ['./modal.page.scss'],
 })
-export class HomePage {
+export class ModalPage  {
+
   @ViewChild('angularCropper') public angularCropper: NgxCropperjsComponent;
 
   uploadImage:any = "./assets/paisaje.jpg"
@@ -30,25 +27,13 @@ export class HomePage {
   processing = false
 
 
-  constructor(
-    public modalCtrl: ModalController
-  ) {}
-
-  openModal(){
-    let modal = this.modalCtrl.create({component: ModalPage})
-        modal.then((a)=>{
-          console.log("openModal")
-          console.log(a)
-    })
-
-    // const { data } = await modal.onDidDismiss();
-    // console.log(data);
-
-
-    // .then(()=>{      
-    // })
+  constructor() {
 
   }
+
+  ngOnInit() {
+  }
+
 
 
 
@@ -86,6 +71,7 @@ export class HomePage {
   imageLoaded(){
     this.processing = false;
   }
+
   getOrientation(file, callback) {
     var reader = new FileReader();
     reader.onload = function (e:any) {
@@ -212,8 +198,7 @@ export class HomePage {
 
 
 
+
+
+
 }
-
-
-
-

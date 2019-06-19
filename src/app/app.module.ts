@@ -13,12 +13,13 @@ import { AngularCropperjsModule } from 'angular-cropperjs';
 
 // Import angular-cropperjs
 import { NgxCropperjsModule } from 'ngx-cropperjs';
+import { ModalPage } from './modal/modal.page'
 
 
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, ModalPage],
+  entryComponents: [ModalPage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularCropperjsModule,
     NgxCropperjsModule],
