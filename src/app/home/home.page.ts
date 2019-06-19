@@ -13,25 +13,20 @@ import { NgxCropperjsComponent } from 'ngx-cropperjs';
 })
 export class HomePage {
   @ViewChild('angularCropper') public angularCropper: NgxCropperjsComponent;
-  // @ViewChild('imageFile') public angularCropper: NgxCropperjsComponent;
-  @ViewChild('imageFile') imageFilePath: ElementRef;
-  @ViewChild('fileLoader') fileLoader: ElementRef;
+  // @ViewChild('fileLoader') fileLoader: ElementRef;
 
-  
-  myImage = "./assets/paisaje.jpg"
-  uploadImage = undefined
+  uploadImage = "./assets/paisaje.jpg"
   config = {
     dragMode: 'crop',
     aspectRatio: 1,
     autoCrop: true,
     movable: true,
-    zoomable: true,
-    scalable: true,
-    autoCropArea: 0.8,
+    zoomable: false,
+    scalable: false,
+    autoCropArea: 1,
   };
   cropperOptions: any;
   croppedImage = null; 
-  // myImage = null;
   scaleValX = 1;
   scaleValY = 1;
   processing = false
@@ -55,6 +50,8 @@ export class HomePage {
               that.uploadImage = resetBase64Image;
             });
           } else {
+            console.log("reader.result")
+            console.log(reader.result)
             that.uploadImage = reader.result;
           }
         });

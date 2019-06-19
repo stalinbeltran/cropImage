@@ -7,9 +7,6 @@
     </ion-buttons>
     <ion-title>Ionic CropperJS</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only color="danger" (click)="clear()">
-        <ion-icon name="close"></ion-icon>
-      </button>
       <button ion-button icon-only color="secondary" (click)="save()">
         <ion-icon name="checkmark"></ion-icon>
       </button>
@@ -28,52 +25,11 @@
 
     <ion-row *ngIf="uploadImage">
         <ion-col col-4>
-          <button ion-button outline icon-left color="primary" (click)="zoom(true)">
-            <ion-icon name="add"></ion-icon> Zoom
-          </button>
-        </ion-col>
-        <ion-col col-4>
-          <button ion-button outline icon-left color="primary" (click)="zoom(false)">
-            <ion-icon name="remove"></ion-icon> Zoom
-          </button>
-        </ion-col>
-        <ion-col col-4>
           <button ion-button outline icon-left (click)="rotate()">
             <ion-icon name="refresh"></ion-icon> 90 deg
           </button>
         </ion-col>
 
-        <ion-col col-2>
-            <button ion-button clear (click)="scaleX()">
-              Flip X
-            </button>
-          </ion-col>
-          <ion-col col-2>
-            <button ion-button clear (click)="scaleY()">
-              Flip Y
-            </button>
-          </ion-col>
-       
-          <ion-col col-2>
-            <button ion-button clear icon-only (click)="move(0, -10)">
-              <ion-icon name="arrow-round-up"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-2>
-            <button ion-button clear icon-only (click)="move(0, 10)">
-              <ion-icon name="arrow-round-down"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-2>
-            <button ion-button clear icon-only (click)="move(-10, 0)">
-              <ion-icon name="arrow-round-back"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-2>
-            <button ion-button clear icon-only (click)="move(10, 0)">
-              <ion-icon name="arrow-round-forward"></ion-icon>
-            </button>
-          </ion-col>
         </ion-row>
        
         <ion-card *ngIf="croppedImage">
