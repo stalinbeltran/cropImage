@@ -1,9 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { ViewChild } from '@angular/core';
-import { AngularCropperjsComponent } from 'angular-cropperjs';
 
-// Import angular-cropperjs
-// import { NgxCropperjsModule } from 'ngx-cropperjs';
 import { NgxCropperjsComponent } from 'ngx-cropperjs';
 
 @Component({
@@ -13,7 +10,6 @@ import { NgxCropperjsComponent } from 'ngx-cropperjs';
 })
 export class HomePage {
   @ViewChild('angularCropper') public angularCropper: NgxCropperjsComponent;
-  // @ViewChild('fileLoader') fileLoader: ElementRef;
 
   uploadImage = "./assets/paisaje.jpg"
   config = {
