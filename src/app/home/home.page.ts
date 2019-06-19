@@ -38,28 +38,10 @@ export class HomePage {
   }
 
   async openModal(){
-
     const modal = await this.modalController.create({
       component: ModalPage
     });
     await modal.present();
-
-
-/*
-    console.log("openModal")
-    let modal = this.modalCtrl.create({component: ModalPage})
-        modal.then((a)=>{
-          console.log("openModal")
-          console.log(a)
-    })
-*/
-    // const { data } = await modal.onDidDismiss();
-    // console.log(data);
-
-
-    // .then(()=>{      
-    // })
-
   }
 
 

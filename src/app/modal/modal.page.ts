@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgxCropperjsComponent } from 'ngx-cropperjs';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal',
@@ -27,14 +28,18 @@ export class ModalPage  {
   processing = false
 
 
-  constructor() {
+  constructor(private modalCtrl:ModalController) {
 
   }
+
 
   ngOnInit() {
   }
 
 
+  closeModal() {
+    this.modalCtrl.dismiss();
+  }
 
 
   presentActionSheet(fileLoader) {

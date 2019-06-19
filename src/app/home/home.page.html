@@ -17,30 +17,9 @@
 <ion-content>
   
 	<input type="file" id="fileLoader" #fileLoader name="files" title="Load File" hidden />
-    <button ion-button icon-left (click)="presentActionSheet(fileLoader)">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
-    <ngx-cropperjs  #angularCropper [cropperOptions]="config" [imageUrl]="uploadImage" *ngIf='uploadImage'></ngx-cropperjs>
 
-
-    <ion-row *ngIf="uploadImage">
-        <ion-col col-4>
-          <button ion-button outline icon-left (click)="rotate()">
-            <ion-icon name="refresh"></ion-icon> 90 deg
-          </button>
-        </ion-col>
-
-        </ion-row>
-       
-        <ion-card *ngIf="croppedImage">
-          <ion-card-header>My Result</ion-card-header>
-          <ion-card-content>
-            <img [src]="croppedImage">
-          </ion-card-content>
-        </ion-card>
         <button ion-button outline icon-left (click)="openModal()">
             <ion-icon name="refresh"></ion-icon> Open modal
         </button>
-
 
 </ion-content>
